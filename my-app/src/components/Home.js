@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 /**
  * 绑定属性 class 换成className 
@@ -51,6 +52,8 @@ class Home extends React.Component{
     render(){
       return (
         <div>
+
+      <h1>我的数据{this.props.msgText}</h1>
         
           <h2>{this.state.msg}</h2> 
           
@@ -72,7 +75,17 @@ class Home extends React.Component{
       )
     }
     
+ 
+  
 
 }
 
+Home.defaultProps={
+  msgText:'没船只222'
+}
+
+
+Home.propTypes = {
+  msgText:PropTypes.string
+}
 export default Home
